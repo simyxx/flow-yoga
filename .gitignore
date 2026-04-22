@@ -32,8 +32,15 @@ wp-config.php
 # Log files
 *.log
 
+# Cache plugins
+wp-content/cache/
+
 # htaccess
 /.htaccess
+
+# OS stuff
+.DS_Store
+Thumbs.db
 
 # All plugins
 #
