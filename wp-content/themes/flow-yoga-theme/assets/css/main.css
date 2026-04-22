@@ -1,0 +1,93 @@
+/* ===================================================
+   Flow Yoga Studio – Shared Styles
+   =================================================== */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #FFFFFF;
+    color: #31332e;
+}
+
+.font-serif { font-family: 'Poppins', serif; }
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Navbar */
+.navbar-scrolled {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(226, 134, 177, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #E286B1;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(226, 134, 177, 0.39);
+}
+.btn-primary:hover {
+    background-color: #D175A0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(226, 134, 177, 0.23);
+}
+
+/* Backgrounds */
+.bg-gradient-soft {
+    background: linear-gradient(180deg, rgba(253, 242, 247, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Yoga pills (homepage) */
+.yoga-pill {
+    background: linear-gradient(135deg, #fdf2f7 0%, #fae8f0 100%);
+    border: 1px solid rgba(226, 134, 177, 0.1);
+    transition: all 0.3s ease;
+}
+.yoga-pill:hover {
+    border-color: rgba(226, 134, 177, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(226, 134, 177, 0.1);
+}
+
+/* Floating animation (hero image) */
+.floating-pose { animation: float 10s ease-in-out infinite; }
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* News cards */
+.news-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+.news-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(226, 134, 177, 0.1);
+    box-shadow: 0 20px 40px -20px rgba(226, 134, 177, 0.15);
+}
+
+/* Yoga cards (co-nabizime) */
+.yoga-card {
+    background: #FFF0F7;
+    border: 1px solid rgba(226, 134, 177, 0.15);
+    transition: all 0.3s ease;
+}
+.yoga-card:hover {
+    border-color: rgba(226, 134, 177, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(226, 134, 177, 0.12);
+    background: #FDF2F7;
+}
+
+.gallery-card {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+.gallery-card:hover img { transform: scale(1.05); }
+.gallery-card:hover .overlay { opacity: 1; }
