@@ -38,7 +38,7 @@ get_template_part('template-parts/header');
         </div>
 
         <!-- Hlavní obrázek -->
-        <div class="relative flex justify-center items-center" id="hero-image-container">
+        <div class="relative flex justify-center items-center mt-6" id="hero-image-container">
             <div class="absolute inset-0 bg-primary/10 rounded-xl -rotate-3 scale-105"></div>
             <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl floating-pose"
                  id="parallax-img"
@@ -103,7 +103,7 @@ get_template_part('template-parts/header');
                 <?php echo esc_html(get_theme_mod('about_text', 'Prostor, ve kterém najdete pohlazení nejen pro tělo, ale i pro duši. Prostor, který je plný klidu, citu, harmonie a respektu. Umožníme Vám vstoupit "k sobě domů", do svého nitra a užívat si slastné okamžiky splynutí se svou pravou podstatou. A to vše prostřednictvím různých stylů jógy tak, aby si každý našel tu svou.')); ?>
             </p>
             <a class="text-primary font-bold inline-flex items-center gap-2 group text-lg"
-               href="<?php echo esc_url(get_permalink(get_page_by_path('kdo-jsme'))); ?>">
+               href="#instructors">
                 Poznejte nás více
                 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
@@ -112,16 +112,15 @@ get_template_part('template-parts/header');
 </section>
 
 <!-- Instructors Section -->
-<section class="py-32 bg-white">
+<section class="py-32 bg-white"id="instructors">
     <div class="max-w-7xl mx-auto px-8">
         <div class="text-center mb-16">
             <h2 class="font-serif text-5xl mb-6 text-zinc-900">Náš tým</h2>
             <p class="text-zinc-500 text-lg">Seznamte se s lektorkami, které vás provedou vaší cestou.</p>
             <div class="w-24 h-1.5 bg-primary/40 mx-auto mt-6 rounded-full"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="flex flex-wrap justify-center gap-12" >
             <?php
-            // Dotaz na lektorky – vlastní post type "lektor" nebo klasické Pages
             $lektori = get_posts([
                 'post_type'      => 'lektor',
                 'posts_per_page' => 3,
@@ -131,7 +130,7 @@ get_template_part('template-parts/header');
             if ($lektori):
                 foreach ($lektori as $lektor):
                     setup_postdata($lektor); ?>
-                    <div class="flex flex-col items-center text-center group">
+                    <div class="flex flex-col items-center text-center group w-full sm:w-72">
                         <div class="relative w-64 h-64 mb-8 overflow-hidden rounded-full border-4 border-primary-light shadow-lg">
                             <?php if (has_post_thumbnail($lektor->ID)):
                                 echo get_the_post_thumbnail($lektor->ID, 'thumbnail', ['class' => 'w-full h-full object-cover group-hover:scale-110 transition-transform duration-700']);
@@ -144,7 +143,7 @@ get_template_part('template-parts/header');
                 wp_reset_postdata();
             else: ?>
                 <!-- Fallback – žádní lektoři ještě nejsou zadání přes admin -->
-                <div class="flex flex-col items-center text-center group">
+                <div class="flex flex-col items-center text-center group w-full sm:w-72">
                     <div class="relative w-64 h-64 mb-8 overflow-hidden rounded-full border-4 border-primary-light shadow-lg">
                         <img alt="Šárka" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwlP3hQPNQAdGSt-Pf272w5lqcxYtc-3CDwrvoz5CAuVQXHcb1D6nkGBpmDujV8MbOelOdRztmMCSR4qlpyZnSdto-szLZMmd_YXJNgQaUNOXRr6Ip4Zeca2A74v-_eJ3GY4BKN5kNqgkQJ6jKNr2kh8o42t5DXIA_O9_NfHMwHJMUs39DC99QAPzFOeVGycSBXe7OwXXr2q-G80WWu4gyNCv3Zyiso8wMIRa0VGiUZKGCJkC_PvtNSQ9q0fyDtpve8ZvjIvF0eDs"/>
                     </div>
@@ -179,7 +178,11 @@ get_template_part('template-parts/header');
                         <div class="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-md">
                             <?php if (has_post_thumbnail()):
                                 the_post_thumbnail('medium_large', ['class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000']);
-                            endif; ?>
+                            else: ?>
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-p.png'); ?>"
+                                     alt="<?php the_title_attribute(); ?>"
+                                     class="w-full h-full object-contain bg-white p-12 group-hover:scale-105 transition-transform duration-1000"/>
+                            <?php endif; ?>
                             <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
                         </div>
                         <div class="flex flex-col gap-3">

@@ -16,9 +16,9 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
                 <div class="flex flex-col gap-4">
                     <h5 class="font-bold text-xs uppercase tracking-widest text-primary">Studio</h5>
-                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('kdo-jsme'))); ?>">Kdo jsme</a>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('aktuality'))); ?>">Aktuality</a>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('kontakt'))); ?>">Kontakt</a>
+                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('galerie'))); ?>">Galerie</a>
                 </div>
                 <div class="flex flex-col gap-4">
                     <h5 class="font-bold text-xs uppercase tracking-widest text-primary">Praxe</h5>
@@ -28,10 +28,10 @@
                 </div>
                 <div class="flex flex-col gap-4">
                     <h5 class="font-bold text-xs uppercase tracking-widest text-primary">Sociální sítě</h5>
-                    <?php $ig = get_theme_mod('flow_yoga_instagram'); if ($ig): ?>
+                    <?php $ig = get_theme_mod('flow_yoga_instagram', "https://www.instagram.com/flowyogastudiokromeriz/"); if ($ig): ?>
                         <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url($ig); ?>">Instagram</a>
                     <?php endif; ?>
-                    <?php $fb = get_theme_mod('flow_yoga_facebook'); if ($fb): ?>
+                    <?php $fb = get_theme_mod('flow_yoga_facebook', "https://www.facebook.com/flowyogastudiokromeriz/?fref=ts%C2%A0"); if ($fb): ?>
                         <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url($fb); ?>">Facebook</a>
                     <?php endif; ?>
                 </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-zinc-200 gap-4">
-            <p class="text-xs uppercase tracking-widest text-zinc-400">© <?php echo '2024'; ?> <?php bloginfo('name'); ?></p>
+            <p class="text-xs uppercase tracking-widest text-zinc-400">© <?php echo '2015'; ?> <?php bloginfo('name'); ?></p>
             <div class="flex gap-8">
                 <a class="text-xs uppercase tracking-widest text-zinc-400 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('ochrana-soukromi'))); ?>">Ochrana soukromí</a>
                 <a class="text-xs uppercase tracking-widest text-zinc-400 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('obchodni-podminky'))); ?>">Obchodní podmínky</a>
