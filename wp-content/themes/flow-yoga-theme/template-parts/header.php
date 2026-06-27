@@ -11,13 +11,10 @@
 <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-6 transition-all duration-300 bg-transparent" id="top-nav">
     <div class="flex items-center gap-3">
         <?php
-        $logo = get_theme_mod('flow_yoga_logo');
+            $logo = get_theme_mod('flow_yoga_logo', get_template_directory_uri() . '/assets/images/logo-w.png');
         if ($logo): ?>
-            <img alt="<?php bloginfo('name'); ?> Logo" class="h-10 w-auto object-contain" src="<?php echo esc_url($logo); ?>"/>
+            <img alt="<?php bloginfo('name'); ?> Logo" class="h-16 w-auto object-contain" src="<?php echo esc_url($logo); ?>"/>
         <?php endif; ?>
-        <span class="font-serif italic text-xl md:text-2xl text-primary font-bold">
-            <?php bloginfo('name'); ?>
-        </span>
     </div>
 
     <div class="hidden lg:flex items-center gap-8 font-serif text-sm tracking-widest uppercase">
@@ -25,7 +22,7 @@
         wp_nav_menu([
             'theme_location' => 'primary',
             'container'      => false,
-            'items_wrap'     => '%3$s', // bez <ul>, jen <li>
+            'items_wrap'     => '%3$s', 
             'walker'         => new Flow_Yoga_Nav_Walker(),
         ]);
         ?>
