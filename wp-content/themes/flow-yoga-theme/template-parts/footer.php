@@ -4,13 +4,12 @@
         <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 mb-16">
             <div class="flex flex-col items-center md:items-start gap-4">
                 <div class="flex items-center gap-2">
-                    <?php $logo = get_theme_mod('flow_yoga_logo'); if ($logo): ?>
+                    <?php $logo = get_theme_mod('flow_yoga_logo', get_template_directory_uri() . '/assets/images/logo-p.png'); if ($logo): ?>
                         <img alt="<?php bloginfo('name'); ?> Logo" class="h-10 w-auto" src="<?php echo esc_url($logo); ?>"/>
                     <?php endif; ?>
-                    <span class="font-serif text-2xl text-primary font-bold"><?php bloginfo('name'); ?></span>
                 </div>
                 <p class="text-zinc-500 max-w-xs text-center md:text-left">
-                    <?php echo esc_html(get_theme_mod('flow_yoga_footer_text', 'Rádi byste si s námi zacvičili? Jen pojďte! U nás má každý dveře otevřené. Kontaktujte nás.')); ?>
+                    <?php echo esc_html(get_theme_mod('flow_yoga_footer_text', 'Rádi byste si s námi zacvičili? Jen pojďte! U nás má každý dveře otevřené.')); ?>
                 </p>
             </div>
 
