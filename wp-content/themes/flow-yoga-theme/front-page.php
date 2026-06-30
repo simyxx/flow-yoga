@@ -8,7 +8,7 @@ get_template_part('template-parts/header');
 
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-soft">
+<section class="relative min-h-screen flex items-center justify-center pt-32 lg:pt-20 overflow-hidden bg-gradient-soft">
     <div class="absolute inset-0 z-0">
         <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-primary-light rounded-full blur-[100px]"></div>

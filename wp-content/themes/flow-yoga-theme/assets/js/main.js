@@ -4,18 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Navbar scroll effect
+    // Navbar scroll effect - vyčištěno, jen přepíná třídu
     const nav = document.getElementById('top-nav');
     if (nav) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 nav.classList.add('navbar-scrolled');
-                nav.classList.remove('py-6');
-                nav.classList.add('py-3');
             } else {
                 nav.classList.remove('navbar-scrolled');
-                nav.classList.remove('py-3');
-                nav.classList.add('py-6');
             }
         });
     }
