@@ -12,9 +12,12 @@ get_template_part('template-parts/header');
         <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
     </div>
     <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
-        <h1 class="font-serif text-5xl md:text-7xl text-zinc-900 mb-8 leading-tight">Aktuality ze studia</h1>
-        <div class="w-24 h-1.5 bg-primary/40 mx-auto rounded-full mb-8"></div>
-    </div>
+    <h1 class="font-serif text-5xl md:text-7xl text-zinc-900 mb-8 leading-tight">Aktuality ze studia</h1>
+    <div class="w-24 h-1.5 bg-primary/40 mx-auto rounded-full mb-8"></div>
+    <p class="text-xl text-zinc-500 leading-relaxed max-w-2xl mx-auto">
+        Novinky, inspirace a pozvánky přímo ze studia. Sledujte, co se u nás chystá.
+    </p>
+</div>
 </section>
 
 <!-- Příspěvky -->
