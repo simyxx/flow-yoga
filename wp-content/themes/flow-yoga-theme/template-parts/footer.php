@@ -17,12 +17,12 @@
                 <div class="flex flex-col gap-4">
                     <h5 class="font-bold text-xs uppercase tracking-widest text-primary">Studio</h5>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('aktuality'))); ?>">Aktuality</a>
-                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('kontakt'))); ?>">Kontakt</a>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('galerie'))); ?>">Galerie</a>
+                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('kontakt'))); ?>">Kontakt</a>
                 </div>
                 <div class="flex flex-col gap-4">
                     <h5 class="font-bold text-xs uppercase tracking-widest text-primary">Praxe</h5>
-                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('rozvrh'))); ?>">Rozvrh</a>
+                    <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('prvni-lekce'))); ?>">První lekce</a>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('cenik'))); ?>">Ceník</a>
                     <a class="text-sm text-zinc-600 hover:text-primary transition-colors" href="<?php echo esc_url(get_permalink(get_page_by_path('co-nabizime'))); ?>">Co nabízíme</a>
                 </div>
